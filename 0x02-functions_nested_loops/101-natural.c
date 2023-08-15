@@ -13,7 +13,6 @@ int main(void)
 {
 int sum = 0;
 
-    // Iterate through numbers below 1024
 for (int i = 0; i < 1024; i++)
 {
 if (i % 3 == 0 || i % 5 == 0)
