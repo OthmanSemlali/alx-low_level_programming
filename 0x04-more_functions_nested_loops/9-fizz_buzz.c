@@ -1,31 +1,31 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * main - Fizz-Buzz test
- * Return: Success (0)
- *
+ * main - print FizzBuzz
+ * Return: 0
  */
-int  main(void)
+int main(void)
 {
 int i;
 
 for (i = 1; i <= 100; i++)
 {
-if (i % 3 == 0 && i % 5 == 0)
+if (i % 3 == 0)
 {
-printf(" FizzBuzz");
+printf("Fizz");
 }
-else if (i % 3 == 0)
+if (i % 5 == 0)
 {
-printf(" Fizz");
+printf("Buzz");
 }
-else if (i % 5 == 0)
+if (i % 3 != 0 && i % 5 != 0)
 {
-printf(" Buzz");
+printf("%d", i);
 }
-else
+if (i != 100)
 {
-printf(" %d", i);
+printf(" ");
 }
 }
 printf("\n");
