@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
- * is_symbol - Looking for punctuations
- * @c: character to check
- * Return: 1 if punctuation found, 0 Otherwise
- */
-
+ * is_symbol - checks if character is a symbol
+ * @c: character to be checked
+ * Return: 1 if true, 0 if false
+ *
+*/
 int is_symbol(char c)
 {
 switch (c)
@@ -28,7 +27,6 @@ default:
 return (0);
 }
 }
-
 /**
  * cap_string - capitalizes all words of a string
  * @s: string to be capitalized
@@ -39,17 +37,16 @@ return (0);
 char *cap_string(char *s)
 {
 int i = 0;
+int cap_next = 1;
 
 while (s[i] != '\0')
 {
 
-if (is_symbol(s[i]))
+if (cap_next && s[i] >= 'a' && s[i] <= 'z')
 {
-if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-{
-s[i + 1] -= 32;
+s[i] -= 32;
 }
-}
+cap_next = is_symbol(s[i]);
 i++;
 }
 return (s);
