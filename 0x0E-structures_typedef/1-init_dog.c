@@ -7,7 +7,7 @@
  * @name: pointer to dog's name
  * @age: dog's age
  * @owner: pointer to dog's owner
- * aloocate memory for name and owner
+ * Description: aloocate memory for name and owner
  * Return: void
  */
 
